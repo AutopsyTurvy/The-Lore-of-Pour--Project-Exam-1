@@ -1,0 +1,53 @@
+body {
+margin: 0;
+
+}
+
+
+/* Navigation bar */
+
+#nav-bar-header {
+    background-color: #3b3530;
+    height: 3em;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr); 
+}
+
+.nav-grid {
+    list-style: none;
+    display: contents;
+    margin: 0; 
+    padding: 0; 
+}
+
+.grid-item {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.search-icon {
+    grid-column: 17; 
+}
+
+.search-bar {
+    grid-column: 18 / span 4; 
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: #7a726b; 
+    color: #333;
+}
+
+.search-bar input:focus {
+    background-color: white; 
+    outline: none; 
+}
+
+
+/* Logo Navigation Bar */
+
