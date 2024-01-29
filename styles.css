@@ -4,7 +4,8 @@ margin: 0;
 
 h1, h2 {
     font-family: 'Cormorant SC', serif;
-    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
 }
 
 p {
@@ -43,13 +44,38 @@ hr {
     justify-content: center; 
 }
 
+
+.facebook-icon, .pinterest-icon, .instagram-icon, .twitter-icon, .search-icon {
+    font-size: 1.8em;
+}
+
+.facebook-icon { 
+    grid-column: 2; }
+
+.pinterest-icon { 
+    grid-column: 3; }
+
+.instagram-icon { 
+    grid-column: 4; }
+
+.twitter-icon { 
+    grid-column: 5; }
+
+.search-icon { 
+    grid-column: 6; }
+
+.search-bar { 
+    grid-column: 7 / span 4; }
+
+
 .search-icon {
-    grid-column: 17; 
+    grid-column: 18; 
 }
 
 .search-bar {
-    grid-column: 18 / span 4; 
+    grid-column: 19 / span 4; 
 }
+
 
 .search-bar input {
     width: 100%;
@@ -64,6 +90,10 @@ hr {
     background-color: white; 
     outline: none; 
 }
+
+
+
+
 
 
 
@@ -92,7 +122,7 @@ hr {
 
 .header-nav-links a {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 0.5em 3em;
     color: black;
     text-align: center;
     text-decoration: none;
