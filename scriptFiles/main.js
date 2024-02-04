@@ -4,8 +4,8 @@
 
 import { baseURL, allPostsURL } from './urlCall.js';
 
-
 async function insertPostTitlesAndImages() {
+    const loader = document.getElementById('loader'); 
     try {
         const response = await fetch(allPostsURL);
         if (!response.ok) {
@@ -13,9 +13,8 @@ async function insertPostTitlesAndImages() {
         }
         const posts = await response.json();
 
-       
         const postsContainer = document.querySelector('#posts-container');
-  
+
         posts.forEach(post => {
             const postElement = document.createElement('div');
             postElement.className = 'post';
@@ -25,21 +24,21 @@ async function insertPostTitlesAndImages() {
             const imgSrc = imgMatch ? imgMatch[1] : '';
 
             const imageHTML = imgSrc ? `<a href="sitePages/post-detail.html?postId=${post.id}"><div class="post-image"><img src="${imgSrc}" alt=""></div></a>` : '';
-  
+
             postElement.innerHTML = imageHTML + `<h2>${post.title.rendered}</h2>`;
-  
+
             postsContainer.appendChild(postElement);
         });
+        loader.style.display = 'none';
     } catch (error) {
         console.error("Could not fetch the posts: ", error);
+        loader.style.display = 'none'; 
     }
 }
 
-
 async function fetchPostDetails() {
-
+  
 }
-
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const postsContainer = document.querySelector('#posts-container');
