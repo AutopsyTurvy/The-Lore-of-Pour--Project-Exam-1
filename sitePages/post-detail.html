@@ -16,8 +16,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600&family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script defer type="module" src="scriptFiles/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+
+    <script defer type="module" src="../scriptFiles/main.js"></script>
+    <script defer type="module" src="../scriptFiles/post-detail.js"></script>
 
     <title>The Lore of Pour</title>
 </head>
@@ -56,7 +59,7 @@
         <ul class="logo-bar-grid">
 
             <li class="header-nav-links">
-                <a href="link-to-page-1.html">Home</a>
+                <a href="/Index.html">Home</a>
             </li>
 
             <li class="header-nav-links">
@@ -64,11 +67,11 @@
             </li>
 
             <li class="header-nav-links">
-                <img class="main-logo" src="Images/logo-the-lore-of-pour.png" alt="The Lore of Pour Logo">
+                <img class="main-logo" src="../Images/logo-the-lore-of-pour.png" alt="The Lore of Pour Logo">
             </li>
 
             <li class="header-nav-links">
-                <a href="sitePages/posts.html">Posts</a>
+                <a href="posts.html">Posts</a>
             </li>
 
             <li class="header-nav-links">
@@ -82,9 +85,6 @@
 
     <hr>
 
-    <h1> Our Latest:</h1>
-
-
 
     <div id="loader" class="loader">
         <div class="loader">
@@ -92,16 +92,30 @@
             <div class="steam"></div>
             <div class="steam"></div>
             <div class="steam"></div>
-            <div class="loader-message">Sit Tight... We're fetching everything you need...</div>
+            <div class="loader-message">Sit Tight... We're fetching our articles...</div>
           </div>
     </div>
+
+
+
+    <div>
+        <div id="postTitle" class="postTitle"></div>
+        <div id="postContent" class="postContent"></div>
+    </div>
+
+
+
+
+  
+
+
    
 
 
-    <div id="posts-container"></div>
 
 
-   
+
+
 
 
  

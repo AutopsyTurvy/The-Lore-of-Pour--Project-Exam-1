@@ -1,5 +1,6 @@
 body {
 margin: 0;
+align-items: center;
 }
 
 h1, h2 {
@@ -136,7 +137,86 @@ hr {
     border: 1px solid black;
 }
 
+
+
+
 /* Header And Main Page */
 
 
+.loader {
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    display: inline-block; 
+}
 
+.loader img {
+    width: 8em;
+}
+
+.steam {
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    background: black;
+    border-radius: 50%;
+    animation: rise 5s infinite ease-in;
+}
+
+.steam:before,
+.steam:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    background: grey;
+    border-radius: 50%;
+}
+
+.steam:before {
+    left: -10px;
+    width: 6px;
+    height: 6px;
+    animation: rise 4s infinite ease-in 1s;
+}
+
+.steam:after {
+    left: 10px;
+    width: 4px;
+    height: 4px;
+    animation: rise 3s infinite ease-in 2s;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+.post img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+
+
+/* post-detail page */
+
+.postTitle {
+    padding: 2em;
+}
