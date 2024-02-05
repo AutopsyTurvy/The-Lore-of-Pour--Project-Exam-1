@@ -19,6 +19,10 @@ hr {
     border: none;
 }
 
+img {
+  align-content: center;
+}
+
 
 
 
@@ -143,17 +147,41 @@ hr {
 /* Header And Main Page */
 
 
+
+
 .loader {
     color: #000;
     text-align: center;
+    position: fixed; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
     padding: 10px;
-    position: relative;
-    display: inline-block; 
+    margin-top: 1em;
 }
 
 .loader img {
     width: 8em;
 }
+
+.loader-message, .loader-message-lower {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.loader-message {
+    margin-top: 0.2em;
+}
+
+.loader-message-lower {
+    margin-top: 0.5em;
+}
+
+
 
 .steam {
     position: absolute;
@@ -218,5 +246,77 @@ hr {
 /* post-detail page */
 
 .postTitle {
-    padding: 2em;
+    padding: 1em;
+    font-family: 'Cormorant SC', serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2em;
 }
+
+
+#postTitle {
+    font-size: 2em; 
+    margin-bottom: 20px;
+}
+
+
+#postContent {
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 5em;
+
+}
+
+
+#postContent p {
+    margin-bottom: 15px; 
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#postContent h2, #postContent h3 {
+    color: #333; 
+    margin-top: 20px; 
+}
+
+#postContent img {
+
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 90%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+
+
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    position: fixed;
+    background-color: white;
+    border-top: 2px solid black;
+}
+
+
+
+.previous-link, .next-link {
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;;
+}
+
+
+
+
+
