@@ -65,6 +65,15 @@ async function fetchPostDetails() {
     
 }
 
+
+
+
+
+
+//--------------------Carousel function-------------------------
+
+
+
 function setupCarouselControls() {
     const carouselLeft = document.getElementById('carousel-left');
     const carouselRight = document.getElementById('carousel-right');
