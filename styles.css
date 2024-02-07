@@ -1,3 +1,7 @@
+
+/* --- General Styling ----------------------------------------------------------------------*/
+
+
 body {
 margin: 0;
 align-items: center;
@@ -27,7 +31,7 @@ img {
 
 
 
-/* Navigation bar */
+/* --- Navigation Bar ----------------------------------------------------------------------*/
 
 #nav-bar-header {
     background-color: #3b3530;
@@ -48,7 +52,6 @@ img {
     align-items: center; 
     justify-content: center; 
 }
-
 
 .facebook-icon, .pinterest-icon, .instagram-icon, .twitter-icon, .search-icon {
     font-size: 1.8em;
@@ -81,7 +84,6 @@ img {
     grid-column: 19 / span 4; 
 }
 
-
 .search-bar input {
     width: 100%;
     padding: 0.5em;
@@ -104,7 +106,7 @@ img {
 
 
 
-/* Logo Navigation Bar */
+/* --- Logo Navigation Bar ----------------------------------------------------------------------*/
 
 
 .main-logo {
@@ -144,7 +146,7 @@ img {
 
 
 
-/* Header And Main Page */
+/* --- Header and Main Page ----------------------------------------------------------------------*/
 
 
 
@@ -181,14 +183,12 @@ img {
     margin-top: 0.5em;
 }
 
-
-
 .steam {
     position: absolute;
     bottom: 100%; 
     left: 50%;
-    width: 3px;
-    height: 3px;
+    width: 4px;
+    height: 4px;
     background: black;
     border-radius: 50%;
     animation: rise 5s infinite ease-in;
@@ -205,15 +205,15 @@ img {
 
 .steam:before {
     left: -10px;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     animation: rise 4s infinite ease-in 1s;
 }
 
 .steam:after {
     left: 10px;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     animation: rise 3s infinite ease-in 2s;
 }
 
@@ -232,8 +232,12 @@ img {
 }
 
 
+/* --- Main Page Carousel ----------------------------------------------------------------------*/
 
 
+.main-hr {
+    margin-bottom: 3em;
+}
 
 .post img {
     width: 100vw;
@@ -241,9 +245,75 @@ img {
     object-fit: cover;
   }
 
+  #posts-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+  
+  .post {
+    flex: 0 0 auto; 
+    scroll-snap-align: start; 
+    margin-right: 20px; 
+  }
+  
+
+  #posts-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #posts-container {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  #posts-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    position: relative; 
+}
 
 
-/* post-detail page */
+#carousel-left, #carousel-right {
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    border-radius: 50px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    z-index: 10; 
+    width: 2em;
+    height: 2em;
+    padding: 1.5em; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.5em;
+}
+
+#carousel-left { left: 10px; }
+#carousel-right { right: 10px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Post Details Page ----------------------------------------------------------------------*/
+
+
 
 .postTitle {
     padding: 1em;
@@ -253,12 +323,10 @@ img {
     font-size: 2em;
 }
 
-
 #postTitle {
     font-size: 2em; 
     margin-bottom: 20px;
 }
-
 
 #postContent {
     align-items: center;
@@ -266,7 +334,6 @@ img {
     padding-bottom: 5em;
 
 }
-
 
 #postContent p {
     margin-bottom: 15px; 
@@ -292,29 +359,235 @@ img {
     object-fit: cover;
 }
 
-
-
 .grid-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     position: fixed;
     background-color: white;
     border-top: 2px solid black;
 }
 
-
-
-.previous-link, .next-link {
+.grid-container a {
     margin: 0 10px;
     text-decoration: none;
-    font-family: 'Lato', sans-serif;;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: black;
+    border: 1px transparent solid;
+    padding: 0.5em;
+
 }
+
+.grid-container a:hover {
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+
+
+
+/* --- Post Cards Page ----------------------------------------------------------------------*/
+
+
+.post-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s; 
+}
+
+.post-card:hover {
+    transform: scale(1.05); 
+}
+
+.post-card-image {
+    overflow: hidden;
+    border-radius: 8px;
+    line-height: 0; 
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block; 
+    object-fit: cover;
+}
+
+.post-card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+/* --- About Us Page ----------------------------------------------------------------------*/
+
+
+
+.about-us-container {
+    position: relative;
+    text-align: center;
+    color: white; 
+}
+
+.about-us-image {
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover; 
+    padding-bottom: 5em;
+}
+
+
+
+.about-us-text {
+    position: absolute;
+    top: 50%; 
+    left: 70%;
+    transform: translate(-50%, -50%); 
+    width: 40%;
+}
+
+
+.about-us-text h2, .about-us-text p {
+    color: #000;
+    padding: 10px;
+}
+
+.about-us-text h2 {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+
+
+
+
+@media (max-width: 880px) {
+
+    .about-us-text {
+        left: 92%;
+        width: 80%; 
+    }
+
+    .about-us-text h2 {
+        font-size: 1.8em; 
+    }
+
+    .about-us-text p {
+        font-size: 0.9em; 
+    }
+
+    .about-us-text h2, .about-us-text p {
+        padding: 10px;
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 750px) { 
+    .about-us-container {
+        text-align: center;
+    }
+
+    .about-us-image {
+        width: 100%;
+        height: 40vh;
+        padding-bottom: 0.5em;
+    }
+
+    .about-us-text {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none; 
+        padding-top: 1em; 
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .about-us-text h2, .about-us-text p {
+        padding: 1em; 
+        margin: 0 auto;
+        width: 80%;
+        padding-bottom: 3em;
+
+    }
+
+    .about-us-text h2 {
+        font-size: 1.5em; 
+    }
+
+    .about-us-text p {
+        font-size: 1em; 
+    }
+}
+
+
+
+
+
+
+
+
+.error-message, #error-container {
+    font-family: 'Lato', sans-serif;
+    border: black 2px solid;
+
+}
+
+
+.error-message {
+    
+
+    padding: 2em;
+    margin: 0 auto;
+}
+
+
+#error-container {
+    padding: 1em;
+    margin: 0 auto; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: fit-content;
+    border: 1px solid #ccc; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

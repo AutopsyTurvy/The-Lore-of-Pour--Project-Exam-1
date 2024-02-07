@@ -1,18 +1,14 @@
 
-
-
-//post-detail.js
-
-
-
 async function fetchPostDetails() {
-    const loader = document.getElementById('loader'); 
+    const loader = document.getElementById('loader');
+    const errorContainer = document.getElementById('error-container');
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('postId');
 
+   
     if (!postId) {
-        console.error('Post ID is missing in the URL');
-        loader.style.display = 'none'; 
+        errorContainer.innerHTML = 'Error: Post ID is missing in the URL.';
+        loader.style.display = 'none';
         return;
     }
 
@@ -23,20 +19,17 @@ async function fetchPostDetails() {
         }
         const post = await response.json();
 
-    
         const decodedTitle = decodeHtmlEntities(post.title.rendered);
         const cleanTitle = removeSpecialCharacters(decodedTitle);
 
         document.getElementById('postTitle').textContent = cleanTitle;
         document.getElementById('postContent').innerHTML = post.content.rendered;
 
-       
         applyStyling();
-
-        loader.style.display = 'none'; 
     } catch (error) {
-        console.error("Could not fetch the post details: ", error);
-        loader.style.display = 'none';
+        errorContainer.innerHTML = `Apologies- we could not fetch the post details: ${error.message}. Please try again later.`;
+    } finally {
+        loader.style.display = 'none'; 
     }
 }
 
@@ -53,7 +46,6 @@ function removeSpecialCharacters(text) {
 }
 
 function applyStyling() {
-
     const postContent = document.getElementById('postContent');
     postContent.style.textAlign = 'center';
 
