@@ -77,11 +77,11 @@ img {
 
 
 .search-icon {
-    grid-column: 18; 
+    grid-column: 17; 
 }
 
 .search-bar {
-    grid-column: 19 / span 4; 
+    grid-column: 18 / span 4; 
 }
 
 .search-bar input {
@@ -97,6 +97,41 @@ img {
     background-color: white; 
     outline: none; 
 }
+
+
+/* --- Hamburger Menu ----------------------------------------------------------------------*/
+
+.hambuger-icon {
+    grid-column: 23; 
+}
+
+
+
+.hamburger-menu {
+    color: white;
+    cursor: pointer;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,6 +177,14 @@ img {
     cursor: pointer;
     border: 1px solid black;
 }
+
+@media (max-width: 950px) {
+  
+    .header-nav-links a {
+        display: none;
+    }   
+}
+
 
 
 
