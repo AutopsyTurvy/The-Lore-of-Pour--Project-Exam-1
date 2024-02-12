@@ -1,4 +1,6 @@
 
+// Post details.js
+
 async function fetchPostDetails() {
     const loader = document.getElementById('loader');
     const errorContainer = document.getElementById('error-container');
