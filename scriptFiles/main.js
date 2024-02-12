@@ -44,6 +44,8 @@ async function insertPostTitlesAndImages() {
     }
 }
 
+
+
 async function fetchPostDetails() {
 }
 
