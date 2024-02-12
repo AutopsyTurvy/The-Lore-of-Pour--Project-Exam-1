@@ -1,6 +1,5 @@
 
 
-
 // main.js
 
 import { baseURL, allPostsURL } from './urlCall.js';
@@ -51,10 +50,14 @@ async function fetchPostDetails() {
 
 document.addEventListener('DOMContentLoaded', async () => {
     const postsContainer = document.querySelector('#posts-container');
+    const loader = document.getElementById('loader'); 
+
     if (postsContainer) {
         await insertPostTitlesAndImages();
         carouselControls();
-    } else {
-      
+    }
+
+    if (loader) {
+        loader.style.display = 'none';
     }
 });

@@ -18,6 +18,7 @@
     
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <script defer type="module" src="../scriptFiles/main.js"></script>
+    <script defer type="module" src="../scriptFiles/hambugerMenu.js"></script>
     <script defer type="module" src="../scriptFiles/post-detail.js"></script>
 
     <title>About Us</title>
@@ -48,6 +49,24 @@
             <li class="grid-item search-bar">
                 <input type="text" placeholder="Search...">
             </li>
+
+
+            <li class="hambuger-icon">
+                <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+                    <div class="menu-links">
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-nav-links"><a href="../Index.html">Home</a></li>
+                            <li class="dropdown-nav-links"><a href="aboutUs.html">About</a></li>
+                            <li class="dropdown-nav-links"><a href="postCards.html">Posts</a></li>
+                            <li class="dropdown-nav-links"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+            </li>
+
+
+
+
         </ul>
     </nav>
 
