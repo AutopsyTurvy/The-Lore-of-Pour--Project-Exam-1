@@ -31,6 +31,23 @@ img {
 
 
 
+
+@media (max-width: 950px) {
+    .post h2 {
+        font-size: 1.2em
+    }
+}
+
+@media (max-width: 768px) {
+    .post h2 {
+        font-size: 0.95em
+    }
+}
+
+
+
+
+
 /* --- Navigation Bar ----------------------------------------------------------------------*/
 
 #nav-bar-header {
@@ -234,10 +251,11 @@ img {
 
 
 .loader {
+    
     color: #000;
     text-align: center;
     position: fixed; 
-    top: 50%;
+    top: 70%;
     left: 50%; 
     transform: translate(-50%, -50%);
     display: flex; 
@@ -314,6 +332,21 @@ img {
 }
 
 
+@media (max-width: 750px) {
+
+  
+.loader {
+    
+    top: 90%;
+    padding: 10px;
+    margin-top: 2em;
+}
+   
+}
+
+
+
+
 /* --- Main Page Carousel ----------------------------------------------------------------------*/
 
 
@@ -321,7 +354,9 @@ img {
     margin-bottom: 3em;
 }
 
-
+.home-slide-paragraph {
+    display: none;        
+}
 
 
 .post img {
@@ -358,8 +393,6 @@ img {
 
 
 
-
-
 #carousel-left, #carousel-right {
     cursor: pointer;
     position: absolute;
@@ -383,11 +416,27 @@ img {
 
 
 
-@media (max-width: 950px) {
-    #posts-container {
-      scroll-behavior: auto;
+
+@media (max-width: 750px) {
+
+    #carousel-left, #carousel-right {
+       display: none;
     }
-  }
+
+    #posts-container::-webkit-scrollbar {
+        display: block;
+      }
+
+      .home-slide-paragraph {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0.8em;
+            
+    }
+   
+}
+
 
 
 

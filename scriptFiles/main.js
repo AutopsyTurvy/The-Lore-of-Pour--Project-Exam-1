@@ -48,6 +48,15 @@ async function insertPostTitlesAndImages() {
 async function fetchPostDetails() {
 }
 
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     const postsContainer = document.querySelector('#posts-container');
     const loader = document.getElementById('loader'); 
