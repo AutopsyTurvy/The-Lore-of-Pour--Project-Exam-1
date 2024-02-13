@@ -673,7 +673,7 @@ img {
 
 
 
-
+/* --- Error Handling ----------------------------------------------------------------------*/
 
 
 
@@ -707,12 +707,43 @@ img {
 
 
 
+/* --- Contact Page ----------------------------------------------------------------------*/
 
 
 
 
 
 
+
+
+
+.contact-us-image {
+
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.contact-us-paragraph {
+
+
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+
+.contact-form-container {
+
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    max-width: 70%;
+    font-family: 'Lato', sans-serif;
+    padding: 2em;
+}
 
 
 
