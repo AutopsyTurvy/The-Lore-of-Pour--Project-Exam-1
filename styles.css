@@ -321,6 +321,9 @@ img {
     margin-bottom: 3em;
 }
 
+
+
+
 .post img {
     width: 100vw;
     height: 50vh;
@@ -332,6 +335,12 @@ img {
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    position: relative; 
 }
   
   .post {
@@ -345,17 +354,10 @@ img {
     display: none;
   }
   
-  #posts-container {
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
-  }
 
-  #posts-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    position: relative; 
-}
+
+
+
 
 
 #carousel-left, #carousel-right {
@@ -381,12 +383,11 @@ img {
 
 
 
-
-
-
-
-
-
+@media (max-width: 950px) {
+    #posts-container {
+      scroll-behavior: auto;
+    }
+  }
 
 
 
