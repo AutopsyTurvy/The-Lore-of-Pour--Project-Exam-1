@@ -30,24 +30,6 @@ img {
 
 
 
-
-
-@media (max-width: 950px) {
-    .post h2 {
-        font-size: 1.2em
-    }
-}
-
-@media (max-width: 768px) {
-    .post h2 {
-        font-size: 0.95em
-    }
-}
-
-
-
-
-
 /* --- Navigation Bar ----------------------------------------------------------------------*/
 
 #nav-bar-header {
@@ -436,6 +418,20 @@ img {
     }
    
 }
+
+@media (max-width: 950px) {
+    .post h2 {
+        font-size: 1.2em
+    }
+}
+
+@media (max-width: 768px) {
+    .post h2 {
+        font-size: 0.95em
+    }
+}
+
+
 
 
 
