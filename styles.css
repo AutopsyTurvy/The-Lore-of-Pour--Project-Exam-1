@@ -734,22 +734,90 @@ img {
 }
 
 
-.contact-form-container {
 
+
+
+
+
+.form-container {
     border: 1px solid black;
     margin: 0 auto;
-    text-align: center;
-    align-items: center;
     max-width: 70%;
     font-family: 'Lato', sans-serif;
     padding: 2em;
+    margin-bottom: 4em;
+
+}
+
+form {
+    padding: 1em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.form-group input, textarea {
+    width: 320px;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 4px;
 }
 
 
 
+.subject-box{
+    width: 80%;
+}
+
+.message-box{
+    width: 80%;
+    height: 200px;
+   
+}
+
+input.invalid {
+    border: 1px solid red;
+}
+
+.error-hint {color: red;}
+
+.submit-button {
+    padding: 0.8em;
+    font-size: 1.2em;
+    background: none;
+    border: 1px solid black; 
+    cursor: pointer;
+    color: white;
+    background-color: #3b3530;
+    transition: all 0.5s;
+}
+
+.submit-button:hover {
+    background-color: white;
+    box-shadow: #000;
+    color: #3b3530;
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
 
 
-
-
+.thank-you {
+    padding: 2em;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
 
 

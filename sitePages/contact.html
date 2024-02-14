@@ -17,7 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600&family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="../styles.css">
-    <script defer type="module" src="scriptFiles/main.js"></script>
+
+
+    <script defer type="module" src="/scriptFiles/main.js"></script>
     <script defer type="module" src="../scriptFiles/hambugerMenu.js"></script>
     <script defer type="module" src="../scriptFiles/contact.js"></script>
    
@@ -103,6 +105,20 @@
 
     <h1>Contact:</h1>
 
+
+
+    <div id="loader" class="loader">
+        <div class="loader">
+            <img src="/Images/holyCupLoader.png" alt="Loading">
+            <div class="steam"></div>
+            <div class="steam"></div>
+            <div class="steam"></div>
+            <div class="loader-message">Sit Tight... </div>
+            <div class="loader-message-lower"> We're fetching everything you need...</div>
+          </div>
+    </div>
+
+
    
 
     <img class="contact-us-image" src="../Images/contact.jpg" alt="Teacup with a notebook beside it.">
@@ -127,24 +143,48 @@
 </p>
 
 
-<div class="contact-form-container">
-    
-<form action="/" method="GET">
 
-    <div>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text">
-    </div>
 
-    <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email">
-    </div>
+<div class="form-container">
+    <form>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input name="name" placeholder="Your first and last name:" />
+            <div class="error-hint hidden">Your name is required.</div>
+        </div>
 
- 
-</form>
+        <div class="form-group">
+            <label>Email</label>
+            <input name="email" placeholder="Your Email:" />
+            <div class="error-hint hidden">Please enter a valid email.</div>
+        </div>
 
+
+
+        <div class="form-group">
+            <label>Subject</label>
+            <textarea class="subject-box" name="subject" placeholder="Subject:"></textarea>
+            <div class="error-hint hidden">Please tell us what we can help you with.</div>
+        </div>
+
+        <div class="form-group">
+            <label>Message</label>
+            <textarea class="message-box" name="message" placeholder="Your Message:"></textarea>
+            <div class="error-hint hidden">Let us know what you're thinking.</div>
+        </div>
+
+
+        <button class="submit-button">Send Your Message</button>
+
+    </form>
 </div>
+
+<div class="thank-you hidden">
+    Thank You for Your message! We will respond as soon as we can! 
+</div>
+
+
+
 
 
  
