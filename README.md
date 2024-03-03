@@ -57,21 +57,26 @@ Where you can see all of the posts available on the site- the specification for 
 
 Contact information with required form validation to proceed.
 
+
+
+---
+
 #### Getting Started
 
 ** Installing **
 
-
 Clone the repo:
-git clone git@github.com: https://github.com/AutopsyTurvy/The-Lore-of-Pour--Project-Exam-1.git
+
+
+    git clone git@github.com: https://github.com/AutopsyTurvy/The-Lore-of-Pour--Project-Exam-1.git
 
 
 
 ** Install the dependencies: **
 
-Enable CORS for access
+    Enable CORS for access
 
-npm install
+    npm install
 
 
 
@@ -79,8 +84,7 @@ npm install
 
 To run the app, run the following commands:
 
-npm run start
-
+    npm run start
 
 
 (You may also choose to add to/ clone this code in another way than through the command line or terminal, and you may do this by opening it in your chosen code editor, via GitHub desktop, and subsequently, VScode. )
