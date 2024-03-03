@@ -44,6 +44,15 @@ Images and relevent text for each are displayed.
 
 Where you can see all of the posts available on the site- the specification for this page was that there needed to be a "see more" button to display more posts after only around ten were initially displayed- I also added a "See less" button.
 
+
+
+
+**Built with: 
+
+<img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/HTML.svg" width="50" height="50"> <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CSS.svg" width="50" height="50"> <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/JavaScript.svg" width="50" height="50"> <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/VSCode-Dark.svg" width="50" height="50"> <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Wordpress.svg" width="50" height="50">
+
+
+
 -- Contact Page
 
 Contact information with required form validation to proceed.
@@ -74,24 +83,34 @@ npm run start
 
 
 
-** Contributing **
+(You may also choose to add to/ clone this code in another way than through the command line or terminal, and you may do this by opening it in your chosen code editor, via GitHub desktop, and subsequently, VScode. )
+
+
+---
+
+Contributing
 
 
 Contributions are welcome, but I would request that the invidicual that does so, clones the code and adds notes so that I can review any changes before they are comitted to the project permanently. Thank you! 
 
+---
 
-** Contact **
+Contact:
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
-** Email me: **
-
+Email me: 
 autopsyturvycoding@gmail.com
 
+<img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Discord.svg" width="50" height="50">
 
 
+Find me on Discord:
+(Kitty Alice Case
+kittyalicerayworth)
 
-** Acknowledgments: **
+---
 
-Thanks to my dear friend Jamie, that went through information on API calls with me, and taught me how to filter through objects and arrays.
+Acknowledgments
 
+
+Thanks to my dear friend Jamie, who explained so much to me. 
