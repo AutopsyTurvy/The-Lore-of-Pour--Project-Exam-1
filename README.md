@@ -1,8 +1,15 @@
 
+---
 
+<p align="center">
+  <img src="https://enchanting-kringle-525ad3.netlify.app/Images/logo-the-lore-of-pour.png" alt="Museum Logo">
+</p>
 
+---
 
+![My Image](Images/readme1.jpeg)
 
+![My Image](Images/readme2.jpeg)
 
 
 # The Lore of Pour- Project Exam 1 - 
